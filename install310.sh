@@ -1,0 +1,11 @@
+sudo apt update
+sudo apt upgrade
+sudo apt install apache2 mysql-client mysql-server php libapache2-mod-php
+sudo apt install graphviz aspell ghostscript clamav php7.4-pspell php7.4-curl php7.4-gd php7.4-intl php7.4-mysql php7.4-xml php7.4-xmlrpc php7.4-ldap php7.4-zip php7.4-soap php7.4-mbstring
+cd /opt
+sudo git clone git://git.moodle.org/moodle.git
+cd moodle
+sudo git branch -a
+sudo git branch --track MOODLE_310_STABLE origin/MOODLE_310_STABLE
+sudo cp -R /opt/moodle /var/www/html/
+sudo chmod -R 0755 /var/www/html/moodle
